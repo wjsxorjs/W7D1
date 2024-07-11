@@ -3,6 +3,11 @@ package ex1.vo;
 public class Test2VO {
 	private String str;
 	private int value;
+	
+	public Test2VO() {
+		System.out.println("TEST2VO");
+	}
+	
 	public String getStr() {
 		return str;
 	}

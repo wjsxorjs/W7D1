@@ -9,7 +9,7 @@
 		TestVO t1 = new TestVO();
 		t1.setMsg("DI 연습입니다.");
 	--> 
-	<bean id="t1" class="ex1.vo.TestVO">
+	<bean id="t1" class="ex1.vo.Test1VO">
 		<property name="msg">
 			<value>DI 연습입니다.</value>
 		</property>
@@ -19,7 +19,20 @@
 		<property name="str">
 			<value>안녕하세요.</value>
 		</property>
+		<!-- Setter Injection  -->
 		<property name="value" value="1000"/>
+	</bean>
+	
+	<bean id="t3" class="ex1.vo.Test3VO">
+		<!-- Constructor Injection  -->
+		<constructor-arg value="마루치" index="0"/>
+		<constructor-arg value="true" index="2"/>
+		<constructor-arg value="22" index="1" type="int"/>
+	</bean>
+	
+	<!-- Test2VO를 참조하는 Test4VO를 생성하자 -->
+	<bean id="t4" class="ex1.vo.Test4VO">
+		<property name="test" ref="t2" />
 	</bean>
 	  
 
