@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Ex2</title>
+<title>Ex3</title>
 </head>
 <body>
 	<h1>스프링 MVC 연습</h1>
