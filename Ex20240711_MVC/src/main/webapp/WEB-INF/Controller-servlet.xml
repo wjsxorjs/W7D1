@@ -10,6 +10,13 @@
 		t1.setMsg("DI 연습입니다.");
 	--> 
 	<bean id="t1" class="ex1.action.Test1Action" name="/t1.inc" />
+	<bean id="t2" class="ex1.action.Test2Action" name="/t2.inc" />
+	<bean id="t3" class="ex1.action.Test3Action" name="/t3.inc" />
+	
+
+	<bean id="t4" class="ex1.action.Test4Action" />
+	
+	
 	
 	<!-- View Resolver설정 -->
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
