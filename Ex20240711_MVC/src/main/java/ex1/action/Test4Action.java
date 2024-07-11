@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import ex1.vo.ParamVO;
+
 @Controller
 public class Test4Action {
 	@RequestMapping("/t4.inc")
@@ -50,6 +52,37 @@ public class Test4Action {
 		mv.addObject("pw",pw);
 		
 		mv.setViewName("ex7");
+		
+		return mv;
+	}
+	
+	@RequestMapping("/t8.inc")
+	public String exe5() {
+		
+		return "ex8";
+	}
+
+	@RequestMapping("/t9.inc")
+	public ModelAndView exe6(String c_idx, String u_name, String unit, String[] hobby) {
+		ModelAndView mv = new ModelAndView();
+		
+		mv.addObject("c_idx",c_idx);
+		mv.addObject("u_name",u_name);
+		mv.addObject("unit",unit);
+		mv.addObject("hobby",hobby);
+		
+		mv.setViewName("ex9");
+		
+		return mv;
+	}
+	
+	@RequestMapping("/t10.inc")
+	public ModelAndView exe7(ParamVO pvo) {
+		ModelAndView mv = new ModelAndView();
+		
+		mv.addObject("vo",pvo);
+		
+		mv.setViewName("ex10");
 		
 		return mv;
 	}
