@@ -14,7 +14,7 @@ public class Test3Action implements Controller {
 		String result = "회원";
 		String v1 = request.getParameter("v1");
 		
-		if(v1 == null) {
+		if(v1 == null || v1.equals("")) {
 			result = "비회원";
 		} else if(v1.equalsIgnoreCase("admin")) {
 			result = "관리자";
